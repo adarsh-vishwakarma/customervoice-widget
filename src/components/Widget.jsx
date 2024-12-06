@@ -1,12 +1,12 @@
 import { Button } from "./ui/button";
 import { Label } from "./ui/label";
+import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
 import { Separator } from "@/components/ui/separator";
 import { useState } from "react";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import tailwindStyles from "../index.css?inline";
 import supabase from "../supabaseClient";
-import { Input } from "./ui/input";
 
 export const Widget = ({ projectId }) => {
   const [rating, setRating] = useState(3);
@@ -102,7 +102,16 @@ export const Widget = ({ projectId }) => {
               </div>
             )}
             <Separator className="my-4" />
-           
+            <div className="text-gray-600">
+              Powered by{" "}
+              <a
+                href="https://nexx-saas.vercel.app/"
+                target="_blank"
+                className="text-indigo-600 hover:underline"
+              >
+                Nexx ⚡️
+              </a>
+            </div>
           </PopoverContent>
         </Popover>
       </div>
